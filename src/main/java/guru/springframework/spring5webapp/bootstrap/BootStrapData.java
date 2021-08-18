@@ -40,7 +40,11 @@ public class BootStrapData implements CommandLineRunner {
         authorRepository.save(rod);
         bookRepository.save(noEJB);
 
-        Publisher mc = new Publisher("olDell", "123 N Main", "Toledo", "OH", "12345");
+        Publisher mc = new Publisher();
+        mc.setName("McNally");
+        mc.setAddressLine1("123 N Main");
+        mc.setCity("Toledo");
+        mc.setPostalCode("12123");
         publisherRepository.save(mc);
 
         System.out.println("Started in Bootstrap");
